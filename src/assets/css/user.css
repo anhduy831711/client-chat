@@ -1,0 +1,44 @@
+.user {
+    height: 80px;
+    color: black;
+}
+
+.user:hover{
+    text-decoration: none;
+    color: black;
+    
+}
+
+.user div{
+    width: 96%;
+    border-radius: 8px;
+    height: 100%;
+    margin: auto;
+    display: flex;
+    overflow: hidden;
+}
+
+.user div:hover{
+    background-color: blue;
+}
+
+.active {
+    background-color: blue;
+}
+
+.user img{
+    height: 90%;
+    border-radius: 50%;
+    margin: 3px 10px;
+}
+
+.user span{
+    display: block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.nameMessage{
+    padding-top: 10px;
+}

@@ -1,13 +1,30 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+
+import Login from "./components/login";
+import ResetPassword from "./components/reset-password";
+import Home from "./components/home";
+import MessageApp from "./reducers";
+
+const store = createStore(MessageApp);
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+    <Router>
+      <Switch>
+        <Route path="/login" exact render={props => (<Login />)} />
+        <Route path="/reset-password" render={props => (<ResetPassword key="resetpassword" />)} />
+        <Route path="/" exact render={props => (<Home key="home" />)} />
+        <Redirect from="*" to="/login" />
+      </Switch>
+    </Router>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

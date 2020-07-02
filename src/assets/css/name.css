@@ -1,0 +1,26 @@
+.name {
+    width: 100%;
+    height: 70px;
+    background-color: white;
+}
+
+.name img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    margin: 10px;
+}
+
+.name span{
+    max-width: calc(100% - 70px);
+    overflow: hidden;
+    display: inline-flex;
+}
+
+.name svg{
+    float: right;
+    margin: 5%;
+    font-size: 1.5em;
+    color: #545b62;
+    cursor: pointer;
+}
